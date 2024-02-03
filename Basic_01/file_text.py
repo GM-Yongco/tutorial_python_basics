@@ -34,6 +34,21 @@ except Exception as error:
 # open for exclusive creation and fails if file exists
 # closing files after use is good practice  
 
+# READ -----------------------------------------------------------------
+
+with open(textFile_path_1, 'r') as file:
+    # Read the entire contents of the file into a string
+    file_contents = file.read()
+    print(file_contents)
+
+
+file_ptr = open(textFile_path_1, "r")
+counter = 0
+for line in file_ptr:
+    print(f"{counter}: {line}" )
+    counter = counter +1
+file_ptr.close()
+
 # WRITE -----------------------------------------------------------------
 
 f1 = open(textFile_path_1, "a")
@@ -47,5 +62,7 @@ f2.close()
 # becomes more apparent when this file is ran multiple times
 
 print("the files were written on")
+
+
 
 print("\nEND ------------------------------------------\n")
