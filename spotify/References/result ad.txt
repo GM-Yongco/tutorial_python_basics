@@ -1,0 +1,25 @@
+{
+    "timestamp":1690793247712,
+    "context":{
+        "external_urls":{
+            "spotify":"https://open.spotify.com/playlist/3dlqmBqYRy65a8ws4spG0H"
+        },
+        "href":"https://api.spotify.com/v1/playlists/3dlqmBqYRy65a8ws4spG0H",
+        "type":"playlist",
+        "uri":"spotify:playlist:3dlqmBqYRy65a8ws4spG0H"
+    },
+    "progress_ms":15078,
+    "item":"None",
+    "currently_playing_type":"ad",
+    "actions":{
+        "disallows":{
+            "pausing":true,
+            "seeking":true,
+            "skipping_prev":true,
+            "skipping_next":true,
+            "interrupting_playback":true,
+            "transferring_playback":true
+        }
+    },
+    "is_playing":false
+}
