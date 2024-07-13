@@ -119,15 +119,21 @@ def test_time_comparison_2(now:datetime = datetime.now()) -> None:
 
 if __name__ == '__main__':
 	section("START")
+	
 	test_date()
 	section("END test")
+	
 	test_time()
 	section("END test")
+	
 	test_date_time()
 	section("END test")
+	
 	test_custom_time()
 	section("END test")
+	
 	test_time_comparison_1()
 	section("END test")
+	
 	test_time_comparison_2()
 	section("END")
