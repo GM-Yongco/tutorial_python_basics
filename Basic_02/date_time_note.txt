@@ -1,0 +1,47 @@
+
+# ========================================================================
+# DATE
+# ========================================================================
+
+day			
+	%a		Sun, Mon				Abbreviated weekday name.
+	%A		Sunday, Monday			Full weekday name.
+	%w		0, 1,..., 6				Weekday as a decimal number. 0 being sunday
+date			
+	%d		01, 02,..., 31			Day of the month as a zero added decimal.
+	%-d		1, 2,..., 30			Day of the month as a decimal number.
+month			
+	%b		Jan, Feb,..., Dec		Abbreviated month name.
+	%B		January, February,...	Full month name.
+	%m		01, 02,..., 12			Month as a zero added decimal number.
+	%-m		1, 2,..., 12			Month as a decimal number.
+year			
+	%y		00, 01,..., 99			Year without century as a zero added decimal number.
+	%-y		0, 1,..., 99			Year without century as a decimal number.
+	%Y		2013, 2019 ...			Year with century as a decimal number.
+raw year			
+	%j		001, 002,..., 366		Day of the year as a zero added decimal number.
+	%-j		1, 2,..., 366			Day of the year as a decimal number.
+	%U		00, 01,..., 53			Week number of the year (Sunday as the first day of the week). All days in a new year preceding the first Sunday are considered to be in week 0.
+	%W		00, 01,..., 53			Week number of the year (Monday as the first day of the week). All days in a new year preceding the first Monday are considered to be in week 0.
+
+# ========================================================================
+# TIME
+# ========================================================================
+
+hour			
+	%H		00, 01,..., 23			Hour (24-hour clock) as a zero added decimal number.
+	%-H		0, 1,..., 23			Hour (24-hour clock) as a decimal number.
+	%I		01, 02,..., 12			Hour (12-hour clock) as a zero added decimal number.
+	%-I		1, 2,...,12				Hour (12-hour clock) as a decimal number.
+	%p		AM, PM					Locale’s AM or PM.
+minute			
+	%M		00, 01,..., 59			Minute as a zero added decimal number.
+	%-M		0, 1,..., 59			Minute as a decimal number.
+second			
+	%S		00, 01,..., 59			Second as a zero added decimal number.
+	%-S		0, 1,..., 59			Second as a decimal number.
+	%f		000000 – 999999			Microsecond as a decimal number, zero added on the left.
+time_zone			
+	%z								UTC offset in the form +HHMM or -HHMM.
+	%Z								Time zone name.
