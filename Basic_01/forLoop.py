@@ -24,3 +24,8 @@ else:
     # else statement after a for statement executes when the for statement completes wihtout an early termination
     # basically if a for loop executes naturally
     # this is seen when the boolean 'successful' is turned false
+
+
+messages:list = ["kill me", "no dont do it", "why not", "you have so much to live for", "thats what they all say", "..."]
+for index, message in enumerate(messages):
+    print(f"{index:3} : {message}")
