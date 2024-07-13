@@ -1,0 +1,77 @@
+{
+    "error": "success",
+    "classroom": {
+        "grade_level": 10,
+        "section": "A",
+        "home_room_teacher": {
+            "name": "Ms. Jane Doe",
+            "subject_specialty": "Mathematics",
+            "years_of_experience": 15
+        },
+        "students": [
+            {
+                "name": "John Smith",
+                "age": 16,
+                "grades": {
+                    "Math": 85,
+                    "Science": 90,
+                    "English": 78
+                }
+            },
+            {
+                "name": "Alice Williams",
+                "age": 15,
+                "grades": {
+                    "Math": 92,
+                    "Science": 88,
+                    "English": 95
+                }
+            },
+            {
+                "name": "Duplikate",
+                "age": 17,
+                "grades": {
+                    "Math": 95,
+                    "Science": 92,
+                    "English": 60
+                }
+            },
+            {
+                "name": "Duplikate",
+                "age": 17,
+                "grades": {
+                    "Math": 95,
+                    "Science": 92,
+                    "English": 60
+                }
+            },
+            {
+                "name": "Duplikate",
+                "age": 17,
+                "grades": {
+                    "Math": 95,
+                    "Science": 92,
+                    "English": 60
+                }
+            },
+            {
+                "name": "Duplikate",
+                "age": 17,
+                "grades": {
+                    "Math": 95,
+                    "Science": 92,
+                    "English": 60
+                }
+            },
+            {
+                "name": "Duplikate",
+                "age": 17,
+                "grades": {
+                    "Math": 95,
+                    "Science": 92,
+                    "English": 60
+                }
+            }
+        ]
+    }
+}

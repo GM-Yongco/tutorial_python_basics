@@ -1,0 +1,21 @@
+Python dictionaries can't be directly turned into JSON in a few situations:
+	Unsupported Data Types:  
+		Python dictionaries can hold various data types as values. 
+		However, the json module has limitations on what it can serialize into JSON format. 
+		Here are some examples:
+			Custom Classes: 
+				If your dictionary values include custom classes 
+				without a built-in JSON representation, 
+				json.dumps will raise an error.
+			Functions: 
+				Functions can't be directly stored in JSON.
+	
+	Cyclic References: 
+		If your dictionary has circular references 
+		(where objects refer to each other), 
+		json.dumps will encounter an infinite loop and raise an exception.
+
+	Non-String Keys:  
+		JSON requires all keys to be strings. 
+		While Python dictionaries can have keys of any hashable data type (like numbers), 
+		json.dumps will raise an error if it encounters non-string keys.
