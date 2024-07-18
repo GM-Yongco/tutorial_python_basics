@@ -5,13 +5,14 @@
 
 from typing import List
 from time import sleep
+from typing import Callable
 
 # ========================================================================
 # FUNCTIONS
 # ========================================================================
 
-def default_func()->None:
-	print("Ahoy")
+def default_func(message:str = "wiwi")->None:
+	print(message)
 
 remember:List[int] = []
 def another_func()->None:
@@ -25,7 +26,7 @@ def another_func()->None:
 	print(out)
 		
 
-def get_time_loop(func = default_func, delay_seconds:int = 5, ):
+def get_time_loop(func:Callable = default_func, delay_seconds:int = 5):
 	time_passed:int = 0
 	while True:
 		sleep(delay_seconds)
@@ -38,4 +39,4 @@ def get_time_loop(func = default_func, delay_seconds:int = 5, ):
 # ========================================================================
 
 if __name__ == '__main__':
-	get_time_loop(another_func, 1)
+	get_time_loop(delay_seconds = 1)
