@@ -71,6 +71,15 @@
                     "Science": 92,
                     "English": 60
                 }
+            },
+            {
+                "name": "Duplikate",
+                "age": 17,
+                "grades": {
+                    "Math": 95,
+                    "Science": 92,
+                    "English": 60
+                }
             }
         ]
     }

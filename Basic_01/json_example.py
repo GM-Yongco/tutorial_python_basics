@@ -41,6 +41,9 @@ def json_write(path:str = "REFERENCES/classroom.json", new_json:dict = "")->bool
 		status_success = False
 	return status_success
 
+def json_to_string()->str:
+	return json.dumps(obj = json_read(), indent=4)
+
 # ========================================================================
 
 def test1():
@@ -78,4 +81,6 @@ if __name__ == '__main__':
 	test2()
 	section("END test2")
 	test1()
+	section("END test2")
+	print(json_to_string())
 	section("END")
