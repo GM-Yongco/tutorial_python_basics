@@ -86,6 +86,21 @@ def test_date_time(now:datetime = datetime.now())->None:
 	for example in examples:
 		print(example)
 
+def test_date_time_2(now:datetime = datetime.now())->None:
+	#default format is just combines the 
+	print(now)
+
+	year:int = now.year
+	month:int = now.month
+	day:int = now.day
+	hour:int = now.hour
+	minute:int = now.minute
+	second:int = now.second
+	microsecond:int = now.microsecond
+
+	print(f"{year} - {month} - {day} - {hour} - {minute} - {second} - {microsecond}")
+
+
 # ========================================================================
 # TESTS 2
 # ========================================================================
@@ -98,6 +113,7 @@ def test_time_comparison_1(custom_time:datetime = datetime.now().replace(hour=14
 	now:datetime = datetime.now()
 
 	# the -1 day is probably cuz the hour cant be a negative attribute for some reason
+	print(type(custom_time - now))
 	print(custom_time - now)
 	print(now - custom_time)
 
@@ -112,6 +128,15 @@ def test_time_comparison_2(now:datetime = datetime.now()) -> None:
 	# adds the value in time delta
 	now = now + timedelta(days = 5, hours= -5)
 	print(now)
+
+def seconds_till(time:datetime = datetime.now().replace(hour=21)) -> None:
+	now:datetime = datetime.now()
+
+	difference:timedelta = time - now
+	if difference.days < 0:
+		difference = now - time
+	
+	print(difference.seconds)
 
 # ========================================================================
 # MAIN 
@@ -129,6 +154,9 @@ if __name__ == '__main__':
 	test_date_time()
 	section("END test")
 	
+	test_date_time_2()
+	section("END test")
+
 	test_custom_time()
 	section("END test")
 	
@@ -136,4 +164,8 @@ if __name__ == '__main__':
 	section("END test")
 	
 	test_time_comparison_2()
+	section("END test")
+
+	seconds_till()
+	section("END test")
 	section("END")
