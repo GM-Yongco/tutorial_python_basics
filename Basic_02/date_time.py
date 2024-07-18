@@ -128,6 +128,8 @@ def test_time_comparison_2(now:datetime = datetime.now()) -> None:
 	# adds the value in time delta
 	now = now + timedelta(days = 5, hours= -5)
 	print(now)
+	now = now + timedelta(seconds = 3600)
+	print(now)
 
 def seconds_till(time:datetime = datetime.now().replace(hour=21)) -> None:
 	now:datetime = datetime.now()
