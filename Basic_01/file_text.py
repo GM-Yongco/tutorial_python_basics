@@ -2,6 +2,7 @@
 # Author          : G.M. Yongco
 # HEADER ------------------------------------------------------------------------------------------
 import os
+import io
 
 def check_if_exist(x:str):
     if not(os.path.exists(x)):
@@ -51,8 +52,10 @@ file_ptr.close()
 
 # WRITE -----------------------------------------------------------------
 
-f1 = open(textFile_path_1, "a")
+f1:io.TextIOWrapper = open(textFile_path_1, "a")
 f1.write("\nNow the file has more content!")
+print(type(f1))
+
 f1.close()
 
 f2 = open(textFile_path_2, "w")
