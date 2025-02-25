@@ -11,6 +11,20 @@ python -m venv <name of your environment>
 //get in the virtual env
 source <name of your environment>/bin/activate
 
-//check that youre using the python in the venv
+// check that youre using the python in the venv
 // note: dont rename or else the path gets all wacked up
 which python
+
+==================================================
+ PYHTON VSCODE INTERPRETER SETUP
+==================================================
+
+ctrl + shift + P
+//enter the command pallete
+
+search for python select interpreter and change it
+fiddle with the settings till you find browse files
+
+the file location should be <name of your environment>/bin/python3
+
+vsCode should now use the python libraries from that venv
