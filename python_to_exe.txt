@@ -1,0 +1,18 @@
+==================================================
+ PYTHON TO EXE 
+==================================================
+
+// installation
+pip install pyinstaller
+
+// convert to exe
+pyinstaller --onefile your_script.py
+
+==================================================
+ OTHER FILES MEANING
+==================================================
+
+"build" is just temporary files use to build the exe
+"dist" means distribution
+    its where you will find your independent exe
+"*.spec" file is a temporary specifications file, and changes the output depending on your settings
