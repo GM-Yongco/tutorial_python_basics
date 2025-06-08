@@ -1,7 +1,7 @@
 # Author				: G.M. Yongco #BeSomeoneWhoCanStandByShinomiya
 # Date					: ur my date uwu
 # Description			: Code that will impress u ;)
-# Actual Description	: A simple Tkinter app to reverse strings
+# Actual Description	: A simple Tkinter to turn octal to binary
 # ========================================================================
 # HEADERS
 # ========================================================================
@@ -11,21 +11,30 @@ import tkinter as tk
 # FUNCTIONS 01
 # ========================================================================
 
-def reverse_string(input_box: tk.Entry, output_box: tk.Text) -> None:
-	# Reverses the input text and displays it in the output box
+def oct_to_binary(x:str = "") -> int:
+	ret_val:str = ""
+	x:list = list(x)
+
+	try:
+		octal_to_binary_guide:list = ["000", "001", "010", "011", "100", "101", "110", "111"]
+		for digit in x:
+			ret_val += octal_to_binary_guide[int(digit)]
+	except Exception as e:
+		print(f"EXCEPTION: {e}")
+	return int(ret_val)
+
+def button_function(input_box: tk.Entry, output_box: tk.Text) -> None:
 	input_text = input_box.get()
-	
-	input_text_words:list = input_text.split()
-	reversed_input_text_words:list = [word[::-1] for word in input_text_words]
-	reversed_text = ' '.join(reversed_input_text_words)
+
+	output_text = str(oct_to_binary(input_text))
 	
 	output_box.config(state=tk.NORMAL)
 	output_box.delete(1.0, tk.END)
-	output_box.insert(tk.END, reversed_text)
+	output_box.insert(tk.END, output_text)
 	output_box.config(state=tk.DISABLED)
 
+# ctrl+a functionality
 def select_all(event: tk.Event) -> str:
-	# ctrl+a functionality
 	event.widget.select_range(0, tk.END)
 	return 'break'  # Prevent the default behavior
 
@@ -33,10 +42,10 @@ def select_all(event: tk.Event) -> str:
 # FUNCTIONS 02
 # ========================================================================
 
-WINDOW_TITLE = "Reverse String Tool"
+WINDOW_TITLE = "octal to binary"
 INPUT_LABEL_TEXT = "Input:"
 OUTPUT_LABEL_TEXT = "Output:"
-REVERSE_BUTTON_TEXT = "Reverse"
+BUTTON_TEXT = "Detect"
 
 WORKING_TEXT = 50
 TEXT_HEIGHT = 1
@@ -57,13 +66,13 @@ def setup_ui() -> tk.Tk:
 	output_box = tk.Text(root, height=TEXT_HEIGHT, width=WORKING_TEXT, wrap=tk.WORD, state=tk.DISABLED)
 	output_box.grid(row=1, column=1, padx=10, pady=5)
 
-	# reverse button
-	reverse_button = tk.Button(root, text=REVERSE_BUTTON_TEXT, command=lambda: reverse_string(input_box, output_box))
-	reverse_button.grid(row=2, columnspan=2, pady=10)
+	# button functionality
+	button = tk.Button(root, text=BUTTON_TEXT, command=lambda: button_function(input_box, output_box))
+	button.grid(row=2, columnspan=2, pady=10)
 
 	# ctr+a and enter functionality
 	input_box.bind(sequence="<Control-a>", func=select_all)
-	input_box.bind(sequence="<Return>", func=lambda event: reverse_string(input_box, output_box))
+	input_box.bind(sequence="<Return>", func=lambda event: button_function(input_box, output_box))
 
 	return root
 
