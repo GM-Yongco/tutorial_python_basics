@@ -6,14 +6,14 @@
 sudo apt install python3-venv -y
 
 // create virtual env
-python -m venv <name of your environment>
+python3 -m venv <name of your environment>
 
 //get in the virtual env
 source <name of your environment>/bin/activate
 
 // check that youre using the python in the venv
 // note: dont rename or else the path gets all wacked up
-which python
+which python3
 
 ==================================================
  PYHTON VSCODE INTERPRETER SETUP
