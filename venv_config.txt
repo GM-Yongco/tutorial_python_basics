@@ -28,3 +28,11 @@ fiddle with the settings till you find browse files
 the file location should be <name of your environment>/bin/python3
 
 vsCode should now use the python libraries from that venv
+
+==================================================
+ PYHTON VSCODE JUPYTER SETUP
+==================================================
+
+in the venv so that vscode can see it as kernel
+pip install ipykernel 
+python -m ipykernel install --user --name <custom_env_name>
